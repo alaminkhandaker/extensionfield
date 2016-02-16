@@ -7,7 +7,10 @@
 //
 
 
+#include <iostream>
 #include <stdio.h>
+#include <stdbool.h>
+#include <math.h>
 #include <stdlib.h>
 #define LL unsigned long long
 

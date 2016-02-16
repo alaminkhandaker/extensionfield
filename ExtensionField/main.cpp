@@ -6,11 +6,7 @@
 //  Copyright © 2016 Khandaker Md. Al-Amin. All rights reserved.
 //
 
-#include <iostream>
-#include <stdio.h>
-#include <stdbool.h>
-#include <math.h>
-#include <stdlib.h>
+
 #include "tonelli_Fpm.hpp"
 
 LL Prime;
