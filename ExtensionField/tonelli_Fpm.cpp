@@ -40,8 +40,8 @@ struct poly tonelli_vector(struct poly n, LL qn, LL p) //Modular sqare root of v
         LL temp2 = 1 + rand() % (p*p - 1);
 //        printf("Random value ::temp1 %lld , temp2 == %lld\n", temp1,temp2);
         z = vector_factory(temp1, temp2,p);
-        printf("Legendre sysmbol of vector Z = (%lld + %lld w) is %lld \n",z.x, z.y, legendre_poly(z,qn,p));
-        printPoints(z);
+//        printf("Legendre sysmbol of vector Z = (%lld + %lld w) is %lld \n",z.x, z.y, legendre_poly(z,qn,p));
+//        printPoints(z);
         if (legendre_poly(z,qn,p) != 1)
             break;
     }
@@ -69,7 +69,7 @@ struct poly tonelli_vector(struct poly n, LL qn, LL p) //Modular sqare root of v
         c = multiply(b, b, qn, p);
         M = i;
     }
-    printf("Finally square root is ");
+//    printf("Finally square root is ");
     printPoints(R);
     struct poly r1 = multiply(R, R, qn, p);
     if (r1.x == n.x && r1.y == n.y)
