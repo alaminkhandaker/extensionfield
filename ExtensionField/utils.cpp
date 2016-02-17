@@ -70,7 +70,16 @@ void printPoints(struct poly a)
 
 LL mod (LL a, LL Prime)
 {
-    return (a % Prime + Prime) % Prime;
+    LL ans;
+    if(a<0){
+        a*=-1;
+        a=a%Prime;
+        ans=Prime-a;
+    }else{
+        ans=a%Prime;
+    }
+//    printf("ans=%lld\n",ans);
+    return ans;
 }
 
 

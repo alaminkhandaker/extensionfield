@@ -33,7 +33,9 @@ int main()
         printf("Legendre sysmbol of vector A = (%lld + %lld w) is %lld \n", p, q, legendre_poly(a,c,Prime));
         
         LL v = legendre_poly(a,c,Prime);
-        vector_addition(a, a, Prime);
+       
+        struct poly g = modularExponen_vector(a, (Prime*Prime - 1)/2, c, Prime);
+        printPoints(g);
         
         if (v != 1)
         {
@@ -43,18 +45,19 @@ int main()
         
         //Squaring
         struct poly asq = modularExponen_vector(a, 2, c, Prime);
-        printf("Legendre sysmbol of vector A^2 = (%lld + %lld11     w) is %lld \n",asq.x, asq.y, legendre_poly(asq,c,Prime));
-        printf("Square of A = (%lld + %lld w) is :: ", p, q);
-        printPoints(asq);
+        printf("Legendre sysmbol of vector A^2 = (%lld + %lld w) is %lld \n",asq.x, asq.y, legendre_poly(asq,c,Prime));
+//        printf("Square of A = (%lld + %lld w) is :: ", p, q);
+//        printPoints(asq);
         
         //Square Roots
         struct poly asqrt = tonelli_vector(asq, c, Prime);
         // struct poly asqrt = tonelli_shanks(asq, Prime);
-        printf("Square Root of A^2 =(%lld + %lld w) is calculated by tonelli\n", asq.x, asq.y);
-        printPoints(asqrt);
+        printf("Square Root of sqrt(A^2) =(%lld + %lld w) is calculated by tonelli\n", asqrt.x, asqrt.y);
+//        printPoints(asqrt);
         
-//        LL z = tonelli(73, Prime);
-//        printf("Square root of 73 %lld And legendre of 73 is %lld\n",z,legendre(73,Prime));
+        LL m = modularExponen(q, 2, Prime);
+        LL z = tonelli(m, Prime);
+        printf("\n\nSquare of q = %lld is %lld \n Sqrt is %lld \n\t And legendre of q = %lld and q^2 = %lld\n",q,m,z,legendre(q,Prime), legendre(m, Prime));
         
     }
     

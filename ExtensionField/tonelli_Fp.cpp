@@ -31,6 +31,7 @@ LL tonelli(LL n, LL p) // Modular Square root in Fp
     {
         Q >>= 1;
         S++;
+//        printf("S %lld== Q %lld \n", S,Q);
     }
     if (S == 1)
     {

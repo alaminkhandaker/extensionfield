@@ -12,17 +12,17 @@ struct poly tonelli_vector(struct poly n, LL qn, LL p) //Modular sqare root of v
 {
     struct poly unit = vector_factory(1, 0, p);
     
-    LL Q = p - 1, S = 0;
+    LL Q = p*p - 1, S = 0;
     while (Q % 2 == 0)
     {
         Q >>= 1;
         S++;
-        printf("S =============%lld \n", S);
+//        printf("S = %lld, Q = %lld \n", S,Q);
     }
     if (S == 1)
     {
-        LL tm1 = (p+1)/4;
-        printf("If S:: %lld , tm1 %lld , nx %lld ny%lld\n", S,tm1,n.x,n.y);
+        LL tm1 = (p*p+1)/4;
+//        printf("In if S = %lld, tm1 = %lld, n.x = %lld, n.y= %lld\n",S,tm1,n.x,n.y);
         
         struct poly r = modularExponen_vector(n, tm1, qn, p);
         printPoints(r);
@@ -36,12 +36,12 @@ struct poly tonelli_vector(struct poly n, LL qn, LL p) //Modular sqare root of v
     struct poly z = vector_factory(1,0,p);
     while (1)
     {
-        LL temp1 = 1 + rand() % (p - 1);
-        LL temp2 = 1 + rand() % (p - 1);
-        printf("Random value ::temp1 %lld , temp2 == %lld\n", temp1,temp2);
+        LL temp1 = 1 + rand() % (p*p - 1);
+        LL temp2 = 1 + rand() % (p*p - 1);
+//        printf("Random value ::temp1 %lld , temp2 == %lld\n", temp1,temp2);
         z = vector_factory(temp1, temp2,p);
         printf("Legendre sysmbol of vector Z = (%lld + %lld w) is %lld \n",z.x, z.y, legendre_poly(z,qn,p));
-        // printPoints(z);
+        printPoints(z);
         if (legendre_poly(z,qn,p) != 1)
             break;
     }
@@ -69,6 +69,8 @@ struct poly tonelli_vector(struct poly n, LL qn, LL p) //Modular sqare root of v
         c = multiply(b, b, qn, p);
         M = i;
     }
+    printf("Finally square root is ");
+    printPoints(R);
     struct poly r1 = multiply(R, R, qn, p);
     if (r1.x == n.x && r1.y == n.y)
         return R;

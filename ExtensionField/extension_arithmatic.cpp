@@ -22,7 +22,8 @@ struct poly vector_factory(LL e, LL f,LL P)
 LL legendre_poly(struct poly a, LL c, LL P)
 {
     LL x;
-    x = multiply_conjugates(a,c,P); //A^(P^2-1)/2 = (A.A^P)^(P-1)/2
+    x = multiply_conjugates(a,c,P); //A^(P^2-1)/2 = (A.A^P)^(P-1)/
+//    printf("X=%lld",x);
     return legendre(x,P);
 }
 
@@ -42,7 +43,8 @@ LL multiply_conjugates(struct poly a, LL c, LL P)
 {   //n(x) = x*x^p
     // struct poly b = frobenious_map(a); //b = x^p, a= x
     LL e = a.x * a.x;
-    LL f = - c * a.y * a.y;
+    LL f = c * a.y * a.y;
+//    printf("e=%lld, f=%lld",e,f);
     e = e - f;
     return mod(e,P);
 }

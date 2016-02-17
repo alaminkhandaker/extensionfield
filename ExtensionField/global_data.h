@@ -12,7 +12,7 @@
 #include <stdbool.h>
 #include <math.h>
 #include <stdlib.h>
-#define LL unsigned long long
+#define LL long long
 
 //LL Prime;
 
