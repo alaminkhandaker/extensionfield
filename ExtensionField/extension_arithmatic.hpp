@@ -6,7 +6,6 @@
 //  Copyright © 2016 Khandaker Md. Al-Amin. All rights reserved.
 //
 
-#include <stdio.h>
 #include "tonelli_Fp.hpp"
 
 struct poly vector_addition(struct poly a, struct poly b, LL P);

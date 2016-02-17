@@ -12,6 +12,7 @@
 		EF453F1E1C73219A00C98450 /* tonelli_Fpm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF453F1C1C73219A00C98450 /* tonelli_Fpm.cpp */; };
 		EF453F241C73237300C98450 /* extension_arithmatic.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF453F221C73237300C98450 /* extension_arithmatic.cpp */; };
 		EF453F271C7342A100C98450 /* tonelli_Fp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF453F251C7342A100C98450 /* tonelli_Fp.cpp */; };
+		EF5537571C747DD8002DBE2F /* ecc_arithmatic.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF5537551C747DD8002DBE2F /* ecc_arithmatic.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -38,6 +39,8 @@
 		EF453F231C73237300C98450 /* extension_arithmatic.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = extension_arithmatic.hpp; sourceTree = "<group>"; };
 		EF453F251C7342A100C98450 /* tonelli_Fp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tonelli_Fp.cpp; sourceTree = "<group>"; };
 		EF453F261C7342A100C98450 /* tonelli_Fp.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = tonelli_Fp.hpp; sourceTree = "<group>"; };
+		EF5537551C747DD8002DBE2F /* ecc_arithmatic.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ecc_arithmatic.cpp; sourceTree = "<group>"; };
+		EF5537561C747DD8002DBE2F /* ecc_arithmatic.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ecc_arithmatic.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +83,8 @@
 				EF453F231C73237300C98450 /* extension_arithmatic.hpp */,
 				EF453F251C7342A100C98450 /* tonelli_Fp.cpp */,
 				EF453F261C7342A100C98450 /* tonelli_Fp.hpp */,
+				EF5537551C747DD8002DBE2F /* ecc_arithmatic.cpp */,
+				EF5537561C747DD8002DBE2F /* ecc_arithmatic.hpp */,
 			);
 			path = ExtensionField;
 			sourceTree = "<group>";
@@ -141,6 +146,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF453F271C7342A100C98450 /* tonelli_Fp.cpp in Sources */,
+				EF5537571C747DD8002DBE2F /* ecc_arithmatic.cpp in Sources */,
 				EF453F0F1C730D4F00C98450 /* main.cpp in Sources */,
 				EF453F1A1C731F1400C98450 /* utils.cpp in Sources */,
 				EF453F1E1C73219A00C98450 /* tonelli_Fpm.cpp in Sources */,
