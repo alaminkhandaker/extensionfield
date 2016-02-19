@@ -8,7 +8,7 @@
 
 #include "tonelli_Fpm.hpp"
 
-struct poly tonelli_vector(struct poly n, LL qn, LL p) //Modular sqare root of vectors
+struct poly tonelli_vector(struct poly n, LL qn, LL p) //Modular sqare root of vectors. qn is quadratic non residue c of irreducible poly
 {
     struct poly unit = vector_factory(1, 0, p);
     
@@ -70,7 +70,7 @@ struct poly tonelli_vector(struct poly n, LL qn, LL p) //Modular sqare root of v
         M = i;
     }
 //    printf("Finally square root is ");
-    printPoints(R);
+//    printPoints(R);
     struct poly r1 = multiply(R, R, qn, p);
     if (r1.x == n.x && r1.y == n.y)
         return R;
