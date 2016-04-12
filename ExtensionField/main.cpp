@@ -8,6 +8,7 @@
 
 
 #include "tonelli_Fpm.hpp"
+#include <gmp.h>
 
 LL Prime;
 LL c;
@@ -24,14 +25,17 @@ struct rastional getRationalPoint(struct poly X)
     struct rastional R;
     //RHS
     struct poly a = modularExponen_vector(X, 3, c, Prime); // X^3+b;
+//    printPoints(X);
+//    printPoints(a);
     struct poly b = vector_factory(1, 0, Prime); //b= (1,0) scalar
     struct poly rhs = vector_addition(a, b, Prime);
+//    printPoints(rhs);
     struct poly lhs = vector_factory(0, 0, Prime); //
     
     if(legendre_poly(rhs, c, Prime) == 1)
     {
         lhs = tonelli_vector(rhs, c, Prime);
-        R.P = rhs;
+        R.P = X;
         R.Q = lhs;
         R.isRastional = true;
     }
@@ -63,7 +67,7 @@ int main()
             struct poly X = vector_factory(i, j, Prime);
             struct rastional temp = getRationalPoint(X);
             R[++index] = temp;
-            if(R[++index].isRastional)
+            if(temp.isRastional)
                 printf("R(%lld,%lld w),(%lld, %lldw)\n",temp.P.x, temp.P.y, temp.Q.x, temp.Q.y);
         }
     }
